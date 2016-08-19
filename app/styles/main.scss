@@ -1,0 +1,61 @@
+//bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+@import "bower_components/reset.scss/reset.scss";
+@import "bower_components/sass-burger/_burger.scss";
+@import "bower_components/animate.css/animate.min";
+@import "bower_components/owlcarousel/owl-carousel/owl.carousel";
+// endbower 
+
+// mixin
+@import "../../node_modules/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "partials/fonts.scss";
+@import "partials/variables.scss";
+@import "partials/mixins.scss";
+
+  //burger-sass
+.icon__burger {
+  @include burger(20px, 2px, 4px, #fff);
+  position: absolute;
+
+}
+.is-active .icon__burger {
+  @include burger-to-cross;
+}
+.burger {
+  display: inline-block;
+  background-color: #59595b;
+  cursor: pointer;
+  position: relative;
+  vertical-align: top;
+  width: 17px;
+  height: 17px;
+  display: none;
+}
+  // burger-sass end
+
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+.clear {
+  height: 1px;
+  width: 100%;
+  clear: both;
+}
+
+body {
+	min-width: 320px;
+}
+.button {
+	@include button;
+}
+.norelative {
+	position: static;
+}
+
+
+@import "partials/media.scss";
