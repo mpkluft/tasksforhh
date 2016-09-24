@@ -19,22 +19,5 @@ $(function(){
       $('.top-nav__ul').css('display', '');
     }
   });
-  //раскрытие меню .autorization__ul по клику на человечка
-  $('.authorization__button').click(function(){
-    if($('.autorization__ul').css('display') != 'block'){  
-      $('.autorization__ul').css('display', 'block').animateCss('bounceInDown');
-      $('.top-nav__ul').css('display', '');
-      $('.burger').removeClass('is-active');
-    } else {
-      $('.autorization__ul').css('display', '');
-    }
-  });
-  // При ресайзе закрывать все меню
-  //$(window).resize(function(){
-  //    $('.burger').removeClass('is-active');
-  //   $('.autorization__ul').css('display', '');
-  //    $('.top-nav__ul').css('display', '');
-  //})
-  // слайдер 
 
 });
