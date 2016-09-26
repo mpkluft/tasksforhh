@@ -4,7 +4,6 @@
 @import "bower_components/reset.scss/reset.scss";
 @import "bower_components/sass-burger/_burger.scss";
 @import "bower_components/animate.css/animate.min";
-@import "bower_components/owlcarousel/owl-carousel/owl.carousel";
 // endbower 
 
 // mixin
@@ -56,6 +55,18 @@ body {
 .norelative {
 	position: static;
 }
+
+// begin tasks
+.task {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.time__span,
+.result__span {
+
+}
+// end tasks
 
 
 @import "partials/media.scss";

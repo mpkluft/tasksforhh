@@ -24,7 +24,23 @@
   <!-- yandex shara end-->
 </head>
 <body>
-  <h1>Hello</h1>
+  <div class="tasks">
+    <div class="container">
+      <div class="task task1 row">
+        <div class="task__text col-md-4"> 
+          <p class="task__p">Число 125874 и результат умножения его на 2 — 251748 можно получить друг из друга перестановкой цифр. </p>
+          <p class="task__p">Найдите наименьшее положительное натуральное x такое, что числа 3*x, 4*x можно получить друг из друга перестановкой цифр.</p>
+        </div>
+        <div class="task__program-launch col-md-4">
+          <div id="task1" class="button">Выполнить скрипт</div>
+        </div>
+        <div class="task__result-wrap col-md-4">
+          <div class="time">Время выполнения скрипта<span class="time__span">123</span></div>
+          <div class="result">Результат вычисления<span class="result__span">234</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--
   [if lt IE 10]>
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -48,10 +64,6 @@
   <!-- endbower-->
   <!-- endbuild-->
   <!-- build:js scripts/plugins.js-->
-  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-  <script src="/bower_components/owlcarousel/owl-carousel/owl.carousel.js"></script>
-  <script src="/bower_components/matchHeight/dist/jquery.matchHeight.js"></script>
-  <script src="/bower_components/lightbox2/dist/js/lightbox.js"></script>
   <!-- endbuild-->
   <!-- build:js scripts/main.js-->
   <script src="scripts/main.js"></script>
