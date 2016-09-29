@@ -21,7 +21,6 @@ function reverseNumber(n){
 	return Number(String(n).split("").reverse().join(""));
 }
 
-
 function findPolindrom(num){
 	var reverse = 0,
 			result = 0,
@@ -30,7 +29,7 @@ function findPolindrom(num){
 			reverseSum = 0,
 			timeBegin = Date.now(), //Для замера времени выполнения скрипта
 			timeEnd = 0,  //Для замера времени выполнения скрипта
-    	allTime = 0;  //Для замера времени выполнения скрипта
+    	time = 0;  //Для замера времени выполнения скрипта
 
 	for(var i = 1; i < num; i++) {
 
@@ -63,12 +62,9 @@ function findPolindrom(num){
 	}
 
 	timeEnd = Date.now();
-	allTime = timeEnd - timeBegin;
+	time = timeEnd - timeBegin;
 
-	console.log("скрипт выполнялся " + allTime + " ms");
-
-	console.log("Кол-во чисел,  можно получить полиндром " + result);
-	console.log("Кол-во чисел,  нельзя получить полиндром " + (num - 1 - result));
+	return [result, time];
 }
 
 //findPolindrom(13332);

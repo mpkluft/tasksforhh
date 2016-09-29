@@ -49,24 +49,77 @@
 body {
 	min-width: 320px;
 }
-.button {
-	@include button;
-}
+
 .norelative {
 	position: static;
 }
 
 // begin tasks
 .task {
-  border: 1px solid black;
   padding: 10px;
+  font-size: 13px;
+  border-bottom: 1px dotted black;
+}
+.task__text {
+  
 }
 
-.time__span,
-.result__span {
-
+.task__time,
+.task__result {
+  padding: 10px 0;
 }
 // end tasks
+
+p.task__p {
+  padding: 5px 0;
+}
+
+.button {
+  text-align: center;
+  padding: 10px 20px;
+  color: #000;
+  border: 1px dashed black;
+  @include border-top-radius(3px);
+  @include border-right-radius(3px);
+  @include border-bottom-radius(3px);
+  font-size: em(20px);
+  font-family: verdana;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.task__span {
+  font-size: 15px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.warning__p {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 45%;
+  z-index: 10;
+  color: #fff;
+  width: 130px;
+  height: 130px;
+  background-color: red;
+  padding: 45px 0;
+  text-align: center;
+  font-size: 20px;
+  @include border-top-radius(50%);
+  @include border-bottom-radius(50%);
+}
+
+.tasks {
+  margin-bottom: 20px;
+}
+
+.task__name{
+  margin: 5px;
+  padding: 5px;
+  background-color: #ecdede;
+}
 
 
 @import "partials/media.scss";

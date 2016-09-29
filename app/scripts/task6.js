@@ -37,42 +37,43 @@ function findS(fromM, toN) {
 
 	var n = 0, //проверяемое число
 			m = 0, //подбираемое наименьшее число, m! % n === 0
-			result = "", // сумма подходящих m
+			result = 0, // сумма подходящих m
 			arrayF = createArray(),
 			resultI = "",
 			timeBegin = Date.now(), //Для замера времени выполнения скрипта
 			timeEnd = 0,  //Для замера времени выполнения скрипта
-    	allTime = 0;  //Для замера времени выполнения скрипта
+    	time = 0;  //Для замера времени выполнения скрипта
 
 	for(var i = fromM; i <= toN; i++) {
 		if(i % 10000 === 0) {
-			console.log(i);
 		}
 		//console.log(i);
 		n = i;
-		for(var j = 10; j < 171; j++) {
+		for(var j = 1; j < 171; j++) {
 			m  = arrayF[j];
 			if(m % n === 0){
-				result += j + " ";
-				resultI += i + " ";
+				result += j;
+				resultI += i;
 				break;
 			}
 		}
 	}
 
-	console.log("сумма равна " + result);
-	console.log("Числа из диапазона " + resultI);
-	console.log("------------------");
+	//console.log("сумма равна " + result);
+	//console.log("Числа из диапазона " + resultI);
+	//console.log("------------------");
 
 	timeEnd = Date.now();
-	allTime = timeEnd - timeBegin;
+	time = timeEnd - timeBegin;
 
-	console.log("скрипт выполнялся " + allTime + " ms");
+	//console.log("скрипт выполнялся " + time + " ms");
+
+	return [result, time]
 }
 
 //findS(86, 87);
 //findS(860, 870);
-//findS(8600, 8700);
+//findS(86000, 87000);
 //findS(8600000, 8610000);
 //findS(865000000, 870000000);
 

@@ -12,7 +12,7 @@
  S(2) = P(1,1) + P(2,1) + P(1,2) + P(2,2) = 1, S(10) = 20,
   S(1000) = 248838.
 
-Найдите S(18556). 
+Найдите S(11556). 
 */
 
 
@@ -22,10 +22,7 @@ function findNumber(number){
 			sumN = 0,
 			k = 0,
 			arraySimpleNum = [],
-			iter = 0,
-			a = Date.now(), //Для замера времени выполнения скрипта
-			b = 0,  //Для замера времени выполнения скрипта
-    	res = 0;  //Для замера времени выполнения скрипта
+			iter = 0;
 
 	// Создаем массив протсых чисел до number
 	for(var k = 2; k <= number; k++)
@@ -45,16 +42,11 @@ function findNumber(number){
 		iter = 0;
 	}
 
-	b = Date.now();
-	res = b - a;
-
-	//console.log("скрипт выполнялся " + res + " ms");
-
 	return arraySimpleNum;
 }
 
 
-var x = findNumber(18556);
+var x = findNumber(1155);
 //console.log("Кол-во эл-тов в массиве: " + x.length);
 
 
@@ -67,7 +59,7 @@ function cntK(k, sum, nowSum){
 			//console.log("Произошло вхождение в " + k + " цикл - значение x[j] " + x[j]);
 			nowSum = nowSum + x[j];
 			//console.log("проверяемая сумма " + nowSum);
-			curSum = cntK(k-1, sum, nowSum);
+			var curSum = cntK(k-1, sum, nowSum);
 			if(curSum === false) {
 				if(x[j] >= sum) {
 					//console.log("Происходит пиздец");
@@ -101,7 +93,7 @@ function P(numN){
 			result = 0,
 			a = Date.now(), //Для замера времени выполнения скрипта
 			b = 0,  //Для замера времени выполнения скрипта
-    	res = 0;  //Для замера времени выполнения скрипта
+    	time = 0;  //Для замера времени выполнения скрипта
 
 	//переход к текущему n
 	for( var n = 1; n <= lastN; n++) {
@@ -181,15 +173,16 @@ function P(numN){
 	}
 	
 	
-	console.log("кол-во совпадений: " + result);
+	//console.log("кол-во совпадений: " + result);
 	
 	b = Date.now();
-	res = b - a;
+	time = b - a;
 
-	console.log("скрипт выполнялся " + res + " ms");
+
+	return [result, time];
 }
 
-//P(18556);
+//P(11556);
 
 
 

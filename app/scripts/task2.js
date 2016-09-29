@@ -23,10 +23,10 @@ function wonderfullNumber(firstNum, lastNum){
 	var a = Date.now(), //Для замера времени выполнения скрипта
 			wonderfulNumber = 0, //Кол-во замечательных чисел
 			b = 0,  //Для замера времени выполнения скрипта
-    	res = 0;  //Для замера времени выполнения скрипта
+    	time = 0;  //Для замера времени выполнения скрипта
 
 	// цикл, подбирающий основное число из диапазона [firstNum lastNum]
-	for(j = firstNum; j <= lastNum; j++) {
+	for(var j = firstNum; j <= lastNum; j++) {
 
 		var sum = 0, // обнуление суммы
 		num = String(firstNum), // искомое число
@@ -74,12 +74,14 @@ function wonderfullNumber(firstNum, lastNum){
 		
 		firstNum++;
 	}
-	console.log("wonderfulNumber - " + wonderfulNumber);
+	//console.log("wonderfulNumber - " + wonderfulNumber);
 
 	b = Date.now();
-	res = b - a;
+	time = b - a;
 
-	console.log("скрипт выполнялся " + res + " ms");
+	//console.log("скрипт выполнялся " + time + " ms");
+
+	return [wonderfulNumber, time]
 }
 
 //wonderfullNumber(1, 3400000);

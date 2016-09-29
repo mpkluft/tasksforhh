@@ -24,7 +24,7 @@ function findSumTask7(x, y) {
 			iter = 0,
 			timeBegin = Date.now(), //Для замера времени выполнения скрипта
 			timeEnd = 0,  //Для замера времени выполнения скрипта
-    	allTime = 0;  //Для замера времени выполнения скрипта
+    	time = 0;  //Для замера времени выполнения скрипта
 
   while (numRightUp < x*y) {
 
@@ -35,12 +35,13 @@ function findSumTask7(x, y) {
   }
   result += 1;
 
-	console.log(result);
+	//console.log(result);
 
 	timeEnd = Date.now();
-	allTime = timeEnd - timeBegin;
+	time = timeEnd - timeBegin;
 
-	console.log("скрипт выполнялся " + allTime + " ms");
+	//console.log("скрипт выполнялся " + time + " ms");
+	return [result, time];
 }
 
 

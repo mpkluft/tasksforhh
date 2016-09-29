@@ -30,7 +30,7 @@ var a = Date.now(), //Для замера времени выполнения с
     firstStr = "",
     lastStr = "",
     b = 0,  //Для замера времени выполнения скрипта
-    res = 0;  //Для замера времени выполнения скрипта
+    time = 0;  //Для замера времени выполнения скрипта
 
 do{
   falseNumber = 0;
@@ -59,14 +59,14 @@ do{
 
 } while (first < last);
 
-console.log(first);
-console.log(last);
+//console.log(first);
+//console.log(last);
 
 b = Date.now();
-res = b - a; 
+time = b - a;
 
-console.log("скрипт выполнялся " + res + " ms");
+//console.log("скрипт выполнялся " + time + " ms");
+
+return [first, time];
 
 }
-
-getResult(2);
