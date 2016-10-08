@@ -9,7 +9,7 @@ const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 // Jade
-
+/*
 gulp.task('jade', function(){
   gulp.src('app/jade/*.jade')
     .pipe($.plumber())
@@ -19,7 +19,7 @@ gulp.task('jade', function(){
      ))
     .pipe(gulp.dest('app/'))
 });
-
+*/
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
@@ -121,14 +121,14 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
   });
 
   gulp.watch([
-    'app/jade/*.jade',
+ // 'app/jade/*.jade',
     'app/*.html',
     '.tmp/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
-  gulp.watch('app/jade/*.jade', ['jade']);
+  //gulp.watch('app/jade/*.jade', ['jade']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
